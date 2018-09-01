@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
+const config = {
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
     port: 9001,
@@ -29,4 +29,6 @@ module.exports = {
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
 };
+
+module.exports = config;
 
