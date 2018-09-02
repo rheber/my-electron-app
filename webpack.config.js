@@ -5,7 +5,7 @@ const config = {
   devServer: {
     contentBase: path.join(__dirname, 'app/public/'),
     port: 9001,
-    publicPath: 'http://localhost:9001/dist/app/',
+    publicPath: 'http://localhost:9001/dist/',
     hotOnly: true
   },
   entry: './app/index.js',
@@ -23,8 +23,8 @@ const config = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'dist/app/'),
-    publicPath: '/dist/app/',
+    path: path.resolve(__dirname, 'dist/'),
+    publicPath: '/dist/',
     filename: 'bundle.js'
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
