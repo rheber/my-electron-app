@@ -3,12 +3,12 @@ const webpack = require('webpack');
 
 const config = {
   devServer: {
-    contentBase: path.join(__dirname, 'public/'),
+    contentBase: path.join(__dirname, 'app/public/'),
     port: 9001,
     publicPath: 'http://localhost:9001/dist/',
     hotOnly: true
   },
-  entry: './src/index.js',
+  entry: './app/index.js',
   module: {
     rules: [
       {
@@ -30,7 +30,7 @@ const config = {
   plugins: [new webpack.HotModuleReplacementPlugin()],
   resolve: {
     modules: [
-      path.resolve('./src/'),
+      path.resolve('./app/'),
       path.resolve('./node_modules/')
     ]
   }

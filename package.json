@@ -1,7 +1,7 @@
 {
   "name": "my-electron-app",
   "version": "1.0.0",
-  "main": "src/main.js",
+  "main": "app/public/index.js",
   "license": "GPL-3.0-or-later",
   "scripts": {
     "build": "webpack --mode development",
