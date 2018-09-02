@@ -21,6 +21,7 @@
     "babel-loader": "^8.0.0",
     "concurrently": "^4.0.1",
     "css-loader": "^1.0.0",
+    "devtron": "^1.4.0",
     "electron": "^2.0.8",
     "electron-devtools-installer": "^2.2.4",
     "style-loader": "^0.23.0",

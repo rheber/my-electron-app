@@ -8,6 +8,8 @@ const {
 function createWindow() {
   console.log('Initialising window.');
 
+  require('devtron').install();
+
   installExtension(REACT_DEVELOPER_TOOLS).then(
     name => console.log(`Added extension: ${name}`)
   ).catch(
