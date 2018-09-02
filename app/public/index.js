@@ -13,12 +13,19 @@ function createWindow() {
   if(process.env.NODE_ENV === 'development') {
     const {
       default: installExtension,
-      REACT_DEVELOPER_TOOLS
+      REACT_DEVELOPER_TOOLS,
+      REDUX_DEVTOOLS
     } = require('electron-devtools-installer');
 
     require('devtron').install();
 
     installExtension(REACT_DEVELOPER_TOOLS).then(
+      name => console.log(`Added extension: ${name}`)
+    ).catch(
+      err => console.log(`Error: ${err}`)
+    );
+
+    installExtension(REDUX_DEVTOOLS).then(
       name => console.log(`Added extension: ${name}`)
     ).catch(
       err => console.log(`Error: ${err}`)
