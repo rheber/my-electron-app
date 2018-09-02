@@ -27,7 +27,13 @@ const config = {
     publicPath: '/dist/',
     filename: 'bundle.js'
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+  resolve: {
+    modules: [
+      path.resolve('./src/'),
+      path.resolve('./node_modules/')
+    ]
+  }
 };
 
 module.exports = config;
