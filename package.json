@@ -5,13 +5,11 @@
   "main": "app/public/index.js",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "build": "run-s build-react package",
-    "build-asar": "asar pack . dist/app.asar",
-    "build-public": "cp app/public/* dist/app/",
+    "build": "run-s build-react build-package",
+    "build-package": "electron-packager . --asar --overwrite --out=release/",
     "build-react": "webpack --mode development",
     "dev-electron": "cross-env NODE_ENV=development electron .",
     "dev-webpack-serve": "cross-env NODE_ENV=development webpack-dev-server --mode development",
-    "package": "electron-packager . --asar --overwrite --out=release/",
     "start": "concurrently -k -s first npm:dev-*"
   },
   "dependencies": {
