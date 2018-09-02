@@ -5,12 +5,12 @@
   "main": "app/public/index.js",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "build": "run-s build-react build-package",
-    "build-package": "electron-packager . --asar --overwrite --out=release/",
-    "build-react": "webpack --mode development",
-    "dev-electron": "cross-env NODE_ENV=development electron .",
-    "dev-webpack-serve": "cross-env NODE_ENV=development webpack-dev-server --mode development",
-    "start": "concurrently -k -s first npm:dev-*"
+    "build": "run-s build:react build:package",
+    "build:package": "electron-packager . --asar --overwrite --out=release/",
+    "build:react": "webpack --mode development",
+    "dev:electron": "cross-env NODE_ENV=development electron .",
+    "dev:serve": "cross-env NODE_ENV=development webpack-dev-server --mode development",
+    "start": "run-p -r dev:*"
   },
   "dependencies": {
     "react": "^16.4.2",
@@ -23,7 +23,6 @@
     "@babel/preset-react": "^7.0.0",
     "asar": "^0.14.3",
     "babel-loader": "^8.0.0",
-    "concurrently": "^4.0.1",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "devtron": "^1.4.0",
