@@ -3,7 +3,12 @@ const path = require('path');
 
 function createWindow() {
   console.log(`Initialising window. Environment: ${process.env.NODE_ENV}`);
-  win = new BrowserWindow({height: 600, width: 800});
+  win = new BrowserWindow({
+    height: 600,
+    width: 800,
+    show: false
+  });
+  win.once('ready-to-show', win.show);
 
   if(process.env.NODE_ENV === 'development') {
     const {
