@@ -1,0 +1,29 @@
+module.exports = {
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "indent": [ "error", 2 ],
+    "linebreak-style": [ "error", "unix" ],
+    "quotes": [ "error", "single" ],
+    "no-console": [ "off" ],
+    "no-unused-vars": [ "error", {"argsIgnorePattern": "^_"} ],
+    "react/jsx-uses-react": [ "error" ],
+    "react/jsx-uses-vars": [ "error" ],
+    "react/react-in-jsx-scope": [ "error" ],
+    "semi": [ "error", "always" ]
+  }
+};

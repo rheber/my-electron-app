@@ -12,6 +12,10 @@ Run `yarn`.
 
 Run `yarn start`.
 
+## To run the linter
+
+Run `yarn lint`.
+
 ## To create a release
 
 Run `yarn build`.

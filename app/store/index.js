@@ -21,7 +21,7 @@ function rootReducer(state, action) {
   if(action.type === DEC_COUNTER) {
     return {
       counter: state.counter - 1,
-    }
+    };
   }
   return state;
 }

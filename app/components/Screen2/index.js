@@ -15,16 +15,16 @@ class Screen2 extends React.Component {
   }
 }
 
-function mapState(state, ownProps) {
+function mapState(state, _ownProps) {
   return {
     counter: state.counter,
   };
 }
 
-function mapDispatch(dispatch, ownProps) {
+function mapDispatch(dispatch, _ownProps) {
   return {
-    incCounter: () => {dispatch({type: 'INC_COUNTER'})},
-    decCounter: () => {dispatch({type: 'DEC_COUNTER'})},
+    incCounter: () => {dispatch({type: 'INC_COUNTER'});},
+    decCounter: () => {dispatch({type: 'DEC_COUNTER'});},
   };
 }
 
