@@ -1,4 +1,6 @@
-import {createStore} from 'redux';
+import {createBrowserHistory} from 'history';
+import {applyMiddleware, compose, createStore} from 'redux';
+import {connectRouter, routerMiddleware} from 'connected-react-router';
 
 const INC_COUNTER = 'INC_COUNTER';
 const DEC_COUNTER = 'DEC_COUNTER';
@@ -6,6 +8,9 @@ const DEC_COUNTER = 'DEC_COUNTER';
 const initialState = {
   counter: 0,
 };
+
+const history = createBrowserHistory();
+export {history};
 
 function rootReducer(state, action) {
   if(action.type === INC_COUNTER) {
@@ -21,11 +26,12 @@ function rootReducer(state, action) {
   return state;
 }
 
+const middleware = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
-  rootReducer,
+  connectRouter(history)(rootReducer),
   initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ &&
-  window.__REDUX_DEVTOOLS_EXTENSION__()
+  middleware(applyMiddleware(routerMiddleware(history)))
 );
 
 export default store;

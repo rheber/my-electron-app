@@ -1,4 +1,7 @@
 {
+  'plugins': [
+    '@babel/syntax-export-extensions'
+  ],
   'presets': [
     '@babel/preset-env',
     '@babel/preset-react'

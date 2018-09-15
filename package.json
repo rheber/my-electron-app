@@ -13,6 +13,8 @@
     "start": "run-p -r dev:*"
   },
   "dependencies": {
+    "connected-react-router": "^4.4.1",
+    "history": "^4.7.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-hot-loader": "^4.3.5",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-export-extensions": "^7.0.0-beta.32",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "asar": "^0.14.3",
