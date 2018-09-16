@@ -12,7 +12,8 @@
     "dev:serve": "cross-env NODE_ENV=development webpack-dev-server --mode development",
     "lint": "eslint app/",
     "start": "run-p -r dev:*",
-    "test": "mocha"
+    "test": "run-s build:react \"test:mocha {1}\" --",
+    "test:mocha": "mocha"
   },
   "dependencies": {
     "connected-react-router": "^4.4.1",

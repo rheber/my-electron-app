@@ -18,6 +18,10 @@ Run `yarn start`.
 
 Run `yarn lint`.
 
+## To run tests
+
+Run `yarn test`.
+
 ### To create a release
 
 Run `yarn build`.

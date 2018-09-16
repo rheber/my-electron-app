@@ -6,10 +6,10 @@ class Screen2 extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Link to='/'>Prev</Link>
-        <div>Counter: {this.props.counter}</div>
-        <button onClick={this.props.incCounter}>+</button>
-        <button onClick={this.props.decCounter}>-</button>
+        <Link className='prev' to='/'>Prev</Link>
+        <div className='counter'>Counter: {this.props.counter}</div>
+        <button className='inc' onClick={this.props.incCounter}>+</button>
+        <button className='dec' onClick={this.props.decCounter}>-</button>
       </React.Fragment>
     );
   }
