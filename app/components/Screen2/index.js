@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class Screen2 extends React.Component {
   render() {
@@ -8,8 +9,8 @@ class Screen2 extends React.Component {
       <React.Fragment>
         <Link className='prev' to='/'>Prev</Link>
         <div className='counter'>Counter: {this.props.counter}</div>
-        <button className='inc' onClick={this.props.incCounter}>+</button>
-        <button className='dec' onClick={this.props.decCounter}>-</button>
+        <Button className='inc' onClick={this.props.incCounter}>+</Button>
+        <Button className='dec' onClick={this.props.decCounter}>-</Button>
       </React.Fragment>
     );
   }
