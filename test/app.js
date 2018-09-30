@@ -1,5 +1,5 @@
 const Application = require('spectron').Application;
-const assert = require('assert');
+const assert = require('power-assert');
 const electronPath = require('electron');
 const path = require('path');
 
@@ -25,7 +25,7 @@ describe('App', function() {
       const p = this.app.client.getText('.next');
       p.then(function(selection) {
         try {
-          assert.equal(selection, 'Next');
+          assert(selection === 'Next');
           done();
         } catch(e) {
           done(e);
@@ -36,7 +36,7 @@ describe('App', function() {
     it('links to screen 2', async function() {
       await this.app.client.click('.next');
       const selection = await this.app.client.getText('.counter');
-      assert.equal(selection, 'Counter: 0');
+      assert(selection === 'Counter: 0');
     });
   });
 
@@ -45,7 +45,7 @@ describe('App', function() {
       await this.app.client.click('.next');
       await this.app.client.click('.inc');
       const selection = await this.app.client.getText('.counter');
-      assert.equal(selection, 'Counter: 1');
+      assert(selection === 'Counter: 1');
     })
   });
 });

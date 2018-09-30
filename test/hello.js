@@ -1,12 +1,12 @@
 const Application = require('spectron').Application;
-const assert = require('assert');
+const assert = require('power-assert');
 const electronPath = require('electron');
 const path = require('path');
 
 describe('Hello', function() {
   describe('Mocha', function() {
     it('should equate 2+2 with 4', function() {
-      assert.equal(2 + 2, 4);
+      assert(2 + 2 === 4);
     });
   });
 
