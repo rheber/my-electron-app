@@ -8,6 +8,7 @@ const config = {
     publicPath: 'http://localhost:9001/dist/',
     hotOnly: true
   },
+  devtool: 'source-map',
   entry: './app/index.js',
   module: {
     rules: [
@@ -34,8 +35,7 @@ const config = {
       path.resolve('./node_modules/')
     ]
   },
-  target: 'electron-main'
+  target: 'electron-renderer'
 };
 
 module.exports = config;
-
