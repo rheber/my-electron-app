@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://travis-ci.com/rheber/my-electron-app.svg?branch=master)](https://travis-ci.com/rheber/my-electron-app)
+
 This repo was an experiment to replicate some of the functionality of
 [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 from scratch.
