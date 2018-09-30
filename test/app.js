@@ -46,6 +46,15 @@ describe('App', function() {
       await this.app.client.click('.inc');
       const selection = await this.app.client.getText('.counter');
       assert(selection === 'Counter: 1');
-    })
+    });
+
+    it('eventually increments 0 to 1 using async', async function() {
+      await this.app.client.click('.next');
+      await this.app.client.click('.async-inc');
+      await this.app.client.waitUntil(async () => {
+        const selection = await this.app.client.getText('.counter');
+        return selection === 'Counter: 1';
+      }, 2100, 'expected counter to change');
+    });
   });
 });

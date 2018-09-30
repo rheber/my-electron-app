@@ -32,8 +32,8 @@ function mapDispatch(dispatch, _ownProps) {
     incCounter: () => {dispatch({type: 'INC_COUNTER'});},
     decCounter: () => {dispatch({type: 'DEC_COUNTER'});},
     asyncIncCounter: async () => {
-        await timeout(2000);
-        dispatch({type: 'INC_COUNTER'});
+      await timeout(2000);
+      dispatch({type: 'INC_COUNTER'});
     },
   };
 }
