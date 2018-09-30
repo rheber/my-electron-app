@@ -1,6 +1,7 @@
 const Application = require('spectron').Application;
 const assert = require('assert');
 const electronPath = require('electron');
+const path = require('path');
 
 describe('Hello', function() {
   describe('Mocha', function() {
@@ -14,7 +15,8 @@ describe('Hello', function() {
 
     beforeEach(function() {
       this.app = new Application({
-        path: electronPath
+        path: electronPath,
+        args: [path.join(__dirname, '..')]
       });
       return this.app.start();
     });
