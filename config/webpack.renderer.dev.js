@@ -3,13 +3,14 @@ const webpack = require('webpack');
 
 const config = {
   devServer: {
-    contentBase: path.join(__dirname, 'app/public/'),
+    contentBase: path.join(__dirname, '../app/public/'),
     port: 9001,
     publicPath: 'http://localhost:9001/dist/',
     hotOnly: true
   },
   devtool: 'source-map',
   entry: './app/index.js',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -24,7 +25,7 @@ const config = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'dist/'),
+    path: path.resolve(__dirname, '../dist/'),
     publicPath: '/dist/',
     filename: 'bundle.js'
   },

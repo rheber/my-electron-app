@@ -7,9 +7,9 @@
   "scripts": {
     "build": "run-s build:react build:package",
     "build:package": "electron-packager . --asar --overwrite --out=release/",
-    "build:react": "webpack --mode development",
+    "build:react": "webpack --config config/webpack.renderer.dev.js",
     "dev:electron": "cross-env NODE_ENV=development electron .",
-    "dev:serve": "cross-env NODE_ENV=development webpack-dev-server --mode development",
+    "dev:serve": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.renderer.dev.js",
     "lint": "eslint app/",
     "start": "run-p -r dev:*",
     "test": "run-s build:react \"test:mocha {1}\" --",
